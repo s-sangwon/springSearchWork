@@ -1,0 +1,1071 @@
+[11:23:53][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:23:54][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1541 ms
+[11:23:55][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:23:56][WARN ][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+[11:23:56][ERROR][FrameworkServlet.java:534] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1010)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4957)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5264)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1783)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:293)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:809)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:460)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:408)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:293)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:809)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at java.management/com.sun.jmx.remote.security.MBeanServerAccessController.invoke(MBeanServerAccessController.java:468)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1466)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1307)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1406)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:827)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 65 more
+[11:23:57][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:23:57][WARN ][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+[11:23:57][ERROR][FrameworkServlet.java:534] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:687)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313)
+	at org.apache.jasper.runtime.PageContextImpl.forward(PageContextImpl.java:518)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:125)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 53 more
+[11:23:58][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:23:58][WARN ][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+[11:23:58][ERROR][FrameworkServlet.java:534] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:687)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313)
+	at org.apache.jasper.runtime.PageContextImpl.forward(PageContextImpl.java:518)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:125)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testController' method 
+com.test.first.test.controller.TestController#moveKakaoMapViewMethod()
+to {[GET, POST] [/moveMap.do]}: There is already 'testController' bean method
+com.test.first.test.controller.TestController#moveMapViewMethod() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 53 more
+[11:25:37][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:25:38][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1176 ms
+[11:25:38][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:25:40][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.web.context.support.WebApplicationObjectSupport.setServletContext(javax.servlet.ServletContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:25:40][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:25:40][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.web.context.support.WebApplicationObjectSupport.setServletContext(javax.servlet.ServletContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:25:40][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:25:40][INFO ][FrameworkServlet.java:547] - Completed initialization in 2170 ms
+[11:25:41][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:25:41][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@72399d08
+[11:25:41][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:41][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:25:41][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:25:41][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/main.do
+[11:25:41][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:25:41][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : forwardMainView() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:41][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:41][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@72399d08
+[11:25:41][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:41][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:25:41][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="common/main"; model={}]
+[11:25:41][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:25:42][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:42][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@72399d08
+[11:25:42][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:42][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:25:42][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:25:42][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:25:42][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@79f40379
+[11:25:42][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:42][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:25:42][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:25:42][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/main.do
+[11:25:42][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:25:42][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : forwardMainView() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:42][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:42][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@79f40379
+[11:25:42][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:42][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:25:42][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="common/main"; model={}]
+[11:25:42][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:25:42][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:42][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@79f40379
+[11:25:42][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:42][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:25:42][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:25:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:25:43][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:25:43][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:43][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:25:43][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@12783f15
+[11:25:43][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@1cbfd32a
+[11:25:43][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:25:43][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:25:43][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:25:43][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/ntop3.do
+[11:25:43][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/btop3.do
+[11:25:43][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:25:43][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:25:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : boardReadcountTop3method() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : noticeNewTop3Method() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setReadOnly(true) returned 
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setReadOnly(true) returned 
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setAutoCommit(false) returned 
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setAutoCommit(false) returned 
+[11:25:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : selectNewTop3() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : selectTop3() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:43][INFO ][BeforeAdviceOutPointcut.java:22] - [»çÀüÃ³¸®] : selectNewTop3() ¸Ş¼Òµå Ã¹¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ : 0
+[11:25:43][INFO ][BeforeAdviceOutPointcut.java:22] - [»çÀüÃ³¸®] : selectTop3() ¸Ş¼Òµå Ã¹¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ : 0
+[11:25:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : selectTop3() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : selectNewTop3() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned false
+[11:25:43][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@6a061adc
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@182b3f9
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 135 msec}
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned true
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 136 msec}
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned true
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.new ResultSet returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.new ResultSet returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@fc55454
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@759f2e49
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@76495187
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@49dc1605
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getType() returned 1003
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getType() returned 1003
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 23
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 13
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned 22
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned ¼³°è¹æ½Ä3
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 8
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 14
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 22
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned »õ °Ô½Ã±Û µî·Ï Å×½ºÆ®
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned 11
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 3
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 11
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 21
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned MVC Model2
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned Å×½ºÆ®2
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 2
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned false
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.close() returned null
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.close() returned null
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@7b6539a9
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@7c6ad141
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@54c30d6e
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@66212ba1
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[11:25:44][INFO ][AroundAdvice.java:39] - selectNewTop3() ¸Ş¼Òµå ¼öÇà¿¡ °É¸° ½Ã°£ : 367(ms)ÃÊ
+[11:25:44][INFO ][AroundAdvice.java:39] - selectTop3() ¸Ş¼Òµå ¼öÇà¿¡ °É¸° ½Ã°£ : 367(ms)ÃÊ
+[11:25:44][INFO ][AfterAdvice.java:28] - Impl Å¬·¡½º ¸Ş¼Òµå ½ÇÇà ÈÄ ÀÛµ¿ : ¼­ºñ½º ·ÎÁ÷ ¼öÇàÀÌ ¿Ï·áµÈ ÈÄ ¹«Á¶°Ç ÀÛµ¿µÊ
+[11:25:44][INFO ][AfterAdvice.java:28] - Impl Å¬·¡½º ¸Ş¼Òµå ½ÇÇà ÈÄ ÀÛµ¿ : ¼­ºñ½º ·ÎÁ÷ ¼öÇàÀÌ ¿Ï·áµÈ ÈÄ ¹«Á¶°Ç ÀÛµ¿µÊ
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.commit() returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.commit() returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setAutoCommit(true) returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setReadOnly(false) returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setAutoCommit(true) returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setReadOnly(false) returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[11:25:44][INFO ][BoardController.java:44] - btop3.do : 3
+[11:25:44][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[11:25:44][INFO ][NoticeController.java:77] - ntop3.do : 3
+[11:25:44][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:44][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@12783f15
+[11:25:44][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:44][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:44][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@1cbfd32a
+[11:25:44][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:25:44][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:44][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:25:44][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:25:44][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:25:44][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:44][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:44][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@12783f15
+[11:25:44][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:44][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@1cbfd32a
+[11:25:44][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:44][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:25:44][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:25:44][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:25:44][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:25:47][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:25:47][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:47][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:47][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#testViewMethod()
+[11:25:47][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:25:47][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/test.do
+[11:25:47][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:25:47][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : testViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:47][INFO ][TestController.java:43] - in testViewmethod
+[11:25:47][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:47][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:47][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:47][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#testViewMethod()
+[11:25:47][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/testView"; model={}]
+[11:25:47][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:25:47][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:47][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:47][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:47][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#testViewMethod()
+[11:25:47][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:25:50][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:25:50][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:50][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:50][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:25:50][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:25:50][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/moveMap.do
+[11:25:50][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:25:50][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : moveMapViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:25:50][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:50][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:50][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:50][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:25:50][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/kakaoMapView"; model={}]
+[11:25:50][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:25:50][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:25:50][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:25:50][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:25:50][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:25:50][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:25:55][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first_war_exploded/map1.do
+[11:26:19][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first_war_exploded/map3.do
+[11:26:50][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:26:50][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:26:50][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:26:50][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:26:50][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:26:50][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/moveMap.do
+[11:26:50][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:26:50][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : moveMapViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:26:50][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:26:50][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:26:50][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:26:50][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:26:50][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/kakaoMapView"; model={}]
+[11:26:50][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:26:50][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:26:50][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@1b27a86d
+[11:26:50][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@300b3866
+[11:26:50][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:26:50][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:26:51][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first_war_exploded/map1.do
+[11:27:39][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:27:40][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1194 ms
+[11:27:41][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:27:43][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.web.context.support.WebApplicationObjectSupport.setServletContext(javax.servlet.ServletContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:27:43][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:27:43][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.web.context.support.WebApplicationObjectSupport.setServletContext(javax.servlet.ServletContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:27:43][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:27:43][INFO ][FrameworkServlet.java:547] - Completed initialization in 2159 ms
+[11:27:44][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:27:44][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@5a70ce49
+[11:27:44][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:44][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:27:44][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:27:44][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/main.do
+[11:27:44][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:27:44][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : forwardMainView() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:44][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:44][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@5a70ce49
+[11:27:44][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:44][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:27:44][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="common/main"; model={}]
+[11:27:44][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:45][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@5a70ce49
+[11:27:45][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:45][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:27:45][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:27:45][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@91f58d3
+[11:27:45][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:45][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:27:45][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:27:45][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/main.do
+[11:27:45][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : forwardMainView() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:45][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@91f58d3
+[11:27:45][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:45][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:27:45][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="common/main"; model={}]
+[11:27:45][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:45][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.core.ApplicationHttpRequest@91f58d3
+[11:27:45][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:45][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.HomeController#forwardMainView()
+[11:27:45][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:27:45][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@27e6fef8
+[11:27:45][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:45][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:27:45][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:27:45][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/btop3.do
+[11:27:45][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:27:45][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : boardReadcountTop3method() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:45][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:45][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:27:45][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:27:45][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/ntop3.do
+[11:27:45][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:27:45][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : noticeNewTop3Method() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setReadOnly(true) returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setReadOnly(true) returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setAutoCommit(false) returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setAutoCommit(false) returned 
+[11:27:46][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : selectNewTop3() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:46][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : selectTop3() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:46][INFO ][BeforeAdviceOutPointcut.java:22] - [»çÀüÃ³¸®] : selectTop3() ¸Ş¼Òµå Ã¹¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ : 0
+[11:27:46][INFO ][BeforeAdviceOutPointcut.java:22] - [»çÀüÃ³¸®] : selectNewTop3() ¸Ş¼Òµå Ã¹¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ : 0
+[11:27:46][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : selectTop3() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:46][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : selectNewTop3() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@1bef8b1c
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@45936035
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 107 msec}
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 106 msec}
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.new ResultSet returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.new ResultSet returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@79fd2121
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@18712c75
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5a470e5a
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@1e5bf56c
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getType() returned 1003
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getType() returned 1003
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 13
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 23
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned ¼³°è¹æ½Ä3
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 22
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 8
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 14
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned »õ °Ô½Ã±Û µî·Ï Å×½ºÆ®
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 22
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 3
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 11
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 11
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 21
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned MVC Model2
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned Å×½ºÆ®2
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 2
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned false
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.close() returned null
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.close() returned null
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@8da6cbf
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@708892b8
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2ff9946c
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2ace9cb8
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[11:27:46][INFO ][AroundAdvice.java:39] - selectNewTop3() ¸Ş¼Òµå ¼öÇà¿¡ °É¸° ½Ã°£ : 462(ms)ÃÊ
+[11:27:46][INFO ][AroundAdvice.java:39] - selectTop3() ¸Ş¼Òµå ¼öÇà¿¡ °É¸° ½Ã°£ : 462(ms)ÃÊ
+[11:27:46][INFO ][AfterAdvice.java:28] - Impl Å¬·¡½º ¸Ş¼Òµå ½ÇÇà ÈÄ ÀÛµ¿ : ¼­ºñ½º ·ÎÁ÷ ¼öÇàÀÌ ¿Ï·áµÈ ÈÄ ¹«Á¶°Ç ÀÛµ¿µÊ
+[11:27:46][INFO ][AfterAdvice.java:28] - Impl Å¬·¡½º ¸Ş¼Òµå ½ÇÇà ÈÄ ÀÛµ¿ : ¼­ºñ½º ·ÎÁ÷ ¼öÇàÀÌ ¿Ï·áµÈ ÈÄ ¹«Á¶°Ç ÀÛµ¿µÊ
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.commit() returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.commit() returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setAutoCommit(true) returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setAutoCommit(true) returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setReadOnly(false) returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setReadOnly(false) returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[11:27:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[11:27:46][INFO ][BoardController.java:44] - btop3.do : 3
+[11:27:46][INFO ][NoticeController.java:77] - ntop3.do : 3
+[11:27:46][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:46][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:46][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@27e6fef8
+[11:27:46][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:46][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:46][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:27:46][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:27:46][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:46][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:27:46][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:46][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:27:46][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@27e6fef8
+[11:27:46][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@3445daf7
+[11:27:46][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:46][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:27:46][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:46][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:27:46][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:46][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:27:46][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:27:53][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:27:53][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:53][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:53][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#testViewMethod()
+[11:27:53][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:27:53][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/test.do
+[11:27:53][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:27:53][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : testViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:53][INFO ][TestController.java:43] - in testViewmethod
+[11:27:53][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:53][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:53][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:53][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#testViewMethod()
+[11:27:53][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/testView"; model={}]
+[11:27:53][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:27:53][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:53][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:53][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:53][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#testViewMethod()
+[11:27:53][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:27:54][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:27:54][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:54][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:54][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:27:54][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:27:54][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/moveMap.do
+[11:27:54][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:27:54][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : moveMapViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:54][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:54][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:54][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:54][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:27:54][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/kakaoMapView"; model={}]
+[11:27:54][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:27:54][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:54][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:54][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:54][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:27:54][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:27:56][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:27:56][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:56][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:56][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap1ViewMethod()
+[11:27:56][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:27:56][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/map1.do
+[11:27:56][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:27:56][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : moveMap1ViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:27:56][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:56][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:56][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:56][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap1ViewMethod()
+[11:27:56][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/mapExample01"; model={}]
+[11:27:56][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:27:56][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:27:56][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:27:56][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:27:56][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap1ViewMethod()
+[11:27:56][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:28:42][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:28:42][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:28:42][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:28:42][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap2ViewMethod()
+[11:28:42][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:28:42][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/map2.do
+[11:28:42][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:28:42][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : moveMap2ViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:28:42][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:28:42][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:28:42][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:28:42][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap2ViewMethod()
+[11:28:42][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/mapExample02"; model={}]
+[11:28:42][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:28:43][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:28:43][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:28:43][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:28:43][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap2ViewMethod()
+[11:28:43][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:28:57][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:28:57][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:28:57][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:28:57][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap3ViewMethod()
+[11:28:57][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:28:57][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/map3.do
+[11:28:57][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:28:57][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : moveMap3ViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:28:57][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:28:57][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:28:57][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:28:57][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap3ViewMethod()
+[11:28:57][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/mapExample03"; model={}]
+[11:28:57][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:28:57][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:28:57][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:28:57][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:28:57][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap3ViewMethod()
+[11:28:57][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:29:14][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:29:14][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:29:14][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:29:14][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap4ViewMethod()
+[11:29:14][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:29:14][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/map4.do
+[11:29:14][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:29:14][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : moveMap4ViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:29:14][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:29:14][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:29:14][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:29:14][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap4ViewMethod()
+[11:29:14][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/mapExample04"; model={}]
+[11:29:14][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:29:14][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:29:14][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:29:14][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:29:14][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap4ViewMethod()
+[11:29:14][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:29:21][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : preHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 3
+[11:29:21][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:29:21][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:29:21][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap5ViewMethod()
+[11:29:21][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:29:21][DEBUG][LoggerInterceptor.java:24] - /first_war_exploded/map5.do
+[11:29:21][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:29:21][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : moveMap5ViewMethod() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 0
+[11:29:21][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : postHandle() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:29:21][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:29:21][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:29:21][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap5ViewMethod()
+[11:29:21][INFO ][BeforeAdvice.java:40] - 3¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸ModelAndView [view="test/mapExample05"; model={}]
+[11:29:21][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:29:21][INFO ][BeforeAdvice.java:36] - [¸Ş¼Òµå ½ÇÇàÀü È®ÀÎ] : afterCompletion() ¸Ş¼Òµå ¸Å°³º¯¼ö °¹¼ö ¤Ó 4
+[11:29:21][INFO ][BeforeAdvice.java:40] - 0¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.RequestFacade@3ffa6236
+[11:29:21][INFO ][BeforeAdvice.java:40] - 1¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸org.apache.catalina.connector.ResponseFacade@313d9bb9
+[11:29:21][INFO ][BeforeAdvice.java:40] - 2¹øÂ° Àü´ŞÀÎÀÚ Á¤º¸com.test.first.test.controller.TestController#moveMap5ViewMethod()
+[11:29:21][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:54:21][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:54:23][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1965 ms
+[11:54:23][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:54:26][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.web.context.support.WebApplicationObjectSupport.setServletContext(javax.servlet.ServletContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:54:26][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:54:26][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.web.context.support.WebApplicationObjectSupport.setServletContext(javax.servlet.ServletContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:54:26][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is marked as final: Consider using interface-based JDK proxies instead!
+[11:54:26][INFO ][FrameworkServlet.java:547] - Completed initialization in 2884 ms
+[11:59:48][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : preHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 3
+[11:59:48][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.core.ApplicationHttpRequest@32edc4cf
+[11:59:48][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:48][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.HomeController#forwardMainView()
+[11:59:48][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:59:48][DEBUG][LoggerInterceptor.java:24] - /first/main.do
+[11:59:48][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:59:48][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : forwardMainView() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:48][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : postHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:48][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.core.ApplicationHttpRequest@32edc4cf
+[11:59:48][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:48][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.HomeController#forwardMainView()
+[11:59:48][INFO ][BeforeAdvice.java:40] - 3ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´ModelAndView [view="common/main"; model={}]
+[11:59:48][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:59:48][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : afterCompletion() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:48][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.core.ApplicationHttpRequest@32edc4cf
+[11:59:48][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:48][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.HomeController#forwardMainView()
+[11:59:48][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:59:48][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : preHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 3
+[11:59:48][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : preHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 3
+[11:59:48][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@4ec0385e
+[11:59:48][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:48][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@4007cff6
+[11:59:48][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:48][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:59:48][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:59:48][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:59:48][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:59:48][DEBUG][LoggerInterceptor.java:24] - /first/ntop3.do
+[11:59:48][DEBUG][LoggerInterceptor.java:24] - /first/btop3.do
+[11:59:48][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:59:48][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:59:48][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : boardReadcountTop3method() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:48][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : noticeNewTop3Method() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setReadOnly(true) returned 
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setReadOnly(true) returned 
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setAutoCommit(false) returned 
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setAutoCommit(false) returned 
+[11:59:49][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : selectNewTop3() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:49][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : selectTop3() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:49][INFO ][BeforeAdviceOutPointcut.java:22] - [ì‚¬ì „ì²˜ë¦¬] : selectNewTop3() ë©”ì†Œë“œ ì²«ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´ : 0
+[11:59:49][INFO ][BeforeAdviceOutPointcut.java:22] - [ì‚¬ì „ì²˜ë¦¬] : selectTop3() ë©”ì†Œë“œ ì²«ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´ : 0
+[11:59:49][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : selectNewTop3() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:49][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : selectTop3() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned false
+[11:59:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@1e4a5de9
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@52a536cf
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 191 msec}
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned true
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 191 msec}
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned true
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.new ResultSet returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.new ResultSet returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@2b86c90e
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@49db7caf
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@70705021
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@1cda7448
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getType() returned 1003
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getType() returned 1003
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 23
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 13
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned 22
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned ì„¤ê³„ë°©ì‹3
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 8
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 22
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 14
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned 11
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned ìƒˆ ê²Œì‹œê¸€ ë“±ë¡ í…ŒìŠ¤íŠ¸
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 3
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 21
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned í…ŒìŠ¤íŠ¸2
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 11
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned MVC Model2
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 2
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned false
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.close() returned null
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.close() returned null
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@cbb45ea
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@48e46f
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@1232bcfb
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2e55caff
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[11:59:50][INFO ][AroundAdvice.java:39] - selectNewTop3() ë©”ì†Œë“œ ìˆ˜í–‰ì— ê±¸ë¦° ì‹œê°„ : 549(ms)ì´ˆ
+[11:59:50][INFO ][AroundAdvice.java:39] - selectTop3() ë©”ì†Œë“œ ìˆ˜í–‰ì— ê±¸ë¦° ì‹œê°„ : 549(ms)ì´ˆ
+[11:59:50][INFO ][AfterAdvice.java:28] - Impl í´ë˜ìŠ¤ ë©”ì†Œë“œ ì‹¤í–‰ í›„ ì‘ë™ : ì„œë¹„ìŠ¤ ë¡œì§ ìˆ˜í–‰ì´ ì™„ë£Œëœ í›„ ë¬´ì¡°ê±´ ì‘ë™ë¨
+[11:59:50][INFO ][AfterAdvice.java:28] - Impl í´ë˜ìŠ¤ ë©”ì†Œë“œ ì‹¤í–‰ í›„ ì‘ë™ : ì„œë¹„ìŠ¤ ë¡œì§ ìˆ˜í–‰ì´ ì™„ë£Œëœ í›„ ë¬´ì¡°ê±´ ì‘ë™ë¨
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.commit() returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.commit() returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setAutoCommit(true) returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setReadOnly(false) returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setAutoCommit(true) returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setReadOnly(false) returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[11:59:50][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[11:59:50][INFO ][BoardController.java:44] - btop3.do : 3
+[11:59:50][INFO ][NoticeController.java:77] - ntop3.do : 3
+[11:59:50][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : postHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:50][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : postHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:50][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:50][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@4ec0385e
+[11:59:50][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@4007cff6
+[11:59:50][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:50][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:59:50][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:59:50][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:59:50][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:59:50][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : afterCompletion() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:50][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : afterCompletion() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:50][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@4ec0385e
+[11:59:50][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@4007cff6
+[11:59:50][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:50][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:50][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[11:59:50][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[11:59:50][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:59:50][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:59:50][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : preHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 3
+[11:59:50][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:50][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:50][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#testViewMethod()
+[11:59:50][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:59:50][DEBUG][LoggerInterceptor.java:24] - /first/test.do
+[11:59:50][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:59:50][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : testViewMethod() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:50][INFO ][TestController.java:43] - in testViewmethod
+[11:59:50][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : postHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:50][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:50][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:50][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#testViewMethod()
+[11:59:50][INFO ][BeforeAdvice.java:40] - 3ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´ModelAndView [view="test/testView"; model={}]
+[11:59:50][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:59:51][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : afterCompletion() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:51][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:51][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:51][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#testViewMethod()
+[11:59:51][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[11:59:52][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : preHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 3
+[11:59:52][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:52][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:52][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:59:52][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[11:59:52][DEBUG][LoggerInterceptor.java:24] - /first/moveMap.do
+[11:59:52][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[11:59:52][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : moveMapViewMethod() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[11:59:52][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : postHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:52][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:52][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:52][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:59:52][INFO ][BeforeAdvice.java:40] - 3ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´ModelAndView [view="test/kakaoMapView"; model={}]
+[11:59:52][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[11:59:53][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : afterCompletion() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[11:59:53][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[11:59:53][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[11:59:53][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMapViewMethod()
+[11:59:53][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[12:08:27][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : preHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 3
+[12:08:27][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[12:08:27][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[12:08:27][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMap3ViewMethod()
+[12:08:27][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[12:08:27][DEBUG][LoggerInterceptor.java:24] - /first/map3.do
+[12:08:27][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[12:08:27][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : moveMap3ViewMethod() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[12:08:27][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : postHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[12:08:27][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[12:08:27][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[12:08:27][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMap3ViewMethod()
+[12:08:27][INFO ][BeforeAdvice.java:40] - 3ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´ModelAndView [view="test/mapExample03"; model={}]
+[12:08:27][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[12:08:27][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : afterCompletion() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[12:08:27][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[12:08:27][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[12:08:27][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMap3ViewMethod()
+[12:08:27][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[12:08:29][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : preHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 3
+[12:08:29][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[12:08:29][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[12:08:29][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMap2ViewMethod()
+[12:08:29][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[12:08:29][DEBUG][LoggerInterceptor.java:24] - /first/map2.do
+[12:08:29][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[12:08:29][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : moveMap2ViewMethod() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 0
+[12:08:29][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : postHandle() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[12:08:29][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[12:08:29][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[12:08:29][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMap2ViewMethod()
+[12:08:29][INFO ][BeforeAdvice.java:40] - 3ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´ModelAndView [view="test/mapExample02"; model={}]
+[12:08:29][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[12:08:29][INFO ][BeforeAdvice.java:36] - [ë©”ì†Œë“œ ì‹¤í–‰ì „ í™•ì¸] : afterCompletion() ë©”ì†Œë“œ ë§¤ê°œë³€ìˆ˜ ê°¯ìˆ˜ ã…£ 4
+[12:08:29][INFO ][BeforeAdvice.java:40] - 0ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.RequestFacade@19b9d188
+[12:08:29][INFO ][BeforeAdvice.java:40] - 1ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´org.apache.catalina.connector.ResponseFacade@334e04e4
+[12:08:29][INFO ][BeforeAdvice.java:40] - 2ë²ˆì§¸ ì „ë‹¬ì¸ì ì •ë³´com.test.first.test.controller.TestController#moveMap2ViewMethod()
+[12:08:29][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================

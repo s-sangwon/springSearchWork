@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="departmentMapper">
+
+	<resultMap type="Code_department" id="resultCode_department">
+		<id column="department_code" property="department_code"/>
+		<result column="department_name" property="department_name" />
+	</resultMap>
+
+	<select id="getDepartment" resultMap="resultCode_department">
+		select * from code_department
+	</select>
+</mapper>

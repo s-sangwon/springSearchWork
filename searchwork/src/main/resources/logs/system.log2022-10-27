@@ -1,0 +1,536 @@
+[15:16:01][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:16:04][WARN ][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSession' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is java.io.FileNotFoundException: class path resource [mybatis-config.xml] cannot be opened because it does not exist
+[15:16:04][ERROR][ContextLoader.java:313] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSession' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is java.io.FileNotFoundException: class path resource [mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:401)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:292)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4768)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5230)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: java.io.FileNotFoundException: class path resource [mybatis-config.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:518)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 42 more
+[15:16:30][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:16:32][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 2547 ms
+[15:16:32][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:16:36][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.web.context.support.WebApplicationObjectSupport.setServletContext(javax.servlet.ServletContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+[15:16:36][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is marked as final: Consider using interface-based JDK proxies instead!
+[15:16:36][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.web.context.support.WebApplicationObjectSupport.setServletContext(javax.servlet.ServletContext)] because it is marked as final: Consider using interface-based JDK proxies instead!
+[15:16:36][INFO ][CglibAopProxy.java:263] - Unable to proxy interface-implementing method [public final void org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is marked as final: Consider using interface-based JDK proxies instead!
+[15:16:36][INFO ][FrameworkServlet.java:547] - Completed initialization in 3804 ms
+[15:16:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:16:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@2843c1ea
+[15:16:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:16:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:16:49][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:16:49][DEBUG][LoggerInterceptor.java:24] - /first/main.do
+[15:16:49][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:16:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : forwardMainView() 메소드 매개변수 갯수 ㅣ 0
+[15:16:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:16:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@2843c1ea
+[15:16:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:16:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:16:49][INFO ][BeforeAdvice.java:40] - 3번째 전달인자 정보ModelAndView [view="common/main"; model={}]
+[15:16:49][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:16:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:16:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@2843c1ea
+[15:16:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:16:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:16:49][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[15:16:50][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:16:50][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:16:50][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:16:50][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:16:50][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:16:50][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:16:50][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:16:50][DEBUG][LoggerInterceptor.java:24] - /first/ntop3.do
+[15:16:50][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:16:50][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:16:50][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:16:50][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:16:50][DEBUG][LoggerInterceptor.java:24] - /first/btop3.do
+[15:16:50][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:16:50][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : noticeNewTop3Method() 메소드 매개변수 갯수 ㅣ 0
+[15:16:50][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : boardReadcountTop3method() 메소드 매개변수 갯수 ㅣ 0
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setReadOnly(true) returned 
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setReadOnly(true) returned 
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setAutoCommit(false) returned 
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setAutoCommit(false) returned 
+[15:16:52][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectNewTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:16:52][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:16:52][INFO ][BeforeAdviceOutPointcut.java:22] - [사전처리] : selectNewTop3() 메소드 첫번째 전달인자 정보 : 0
+[15:16:52][INFO ][BeforeAdviceOutPointcut.java:22] - [사전처리] : selectTop3() 메소드 첫번째 전달인자 정보 : 0
+[15:16:52][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectNewTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:16:52][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned false
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned false
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@62468291
+[15:16:52][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@5573e6f4
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 416 msec}
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 416 msec}
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned true
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned true
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.new ResultSet returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.new ResultSet returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@e8886a9
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@21690132
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4eb44f99
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@6ce2767e
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getType() returned 1003
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getType() returned 1003
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 13
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 23
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned 설계방식3
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned 22
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 8
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 14
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned 새 게시글 등록 테스트
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 3
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 22
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned 11
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_num) returned 11
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(board_title) returned MVC Model2
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(board_readcount) returned 2
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(noticeno) returned 21
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(noticetitle) returned 테스트2
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned false
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.close() returned null
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.close() returned null
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@10837b6c
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@c8a0faf
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@6169917f
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@c6a4145
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[15:16:53][INFO ][AroundAdvice.java:39] - selectTop3() 메소드 수행에 걸린 시간 : 811(ms)초
+[15:16:53][INFO ][AroundAdvice.java:39] - selectNewTop3() 메소드 수행에 걸린 시간 : 811(ms)초
+[15:16:53][INFO ][AfterAdvice.java:28] - Impl 클래스 메소드 실행 후 작동 : 서비스 로직 수행이 완료된 후 무조건 작동됨
+[15:16:53][INFO ][AfterAdvice.java:28] - Impl 클래스 메소드 실행 후 작동 : 서비스 로직 수행이 완료된 후 무조건 작동됨
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.commit() returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.commit() returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setAutoCommit(true) returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setAutoCommit(true) returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.setReadOnly(false) returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.setReadOnly(false) returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[15:16:53][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[15:16:53][INFO ][NoticeController.java:77] - ntop3.do : 3
+[15:16:53][INFO ][BoardController.java:44] - btop3.do : 3
+[15:16:53][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:16:53][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:16:53][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:16:53][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:16:53][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:16:53][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:16:53][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:16:53][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:16:53][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:16:53][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:16:53][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:16:53][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:16:53][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:16:53][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:16:53][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:16:53][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:16:53][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:16:53][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:16:53][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[15:16:53][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[15:40:48][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:40:48][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@494c4f35
+[15:40:48][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:40:48][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:40:48][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:40:48][DEBUG][LoggerInterceptor.java:24] - /first/main.do
+[15:40:48][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:40:48][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : forwardMainView() 메소드 매개변수 갯수 ㅣ 0
+[15:40:48][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:40:48][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@494c4f35
+[15:40:48][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:40:48][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:40:48][INFO ][BeforeAdvice.java:40] - 3번째 전달인자 정보ModelAndView [view="common/main"; model={}]
+[15:40:48][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:40:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@494c4f35
+[15:40:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:40:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:40:49][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:40:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:40:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:40:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:40:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:40:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:40:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:40:49][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:40:49][DEBUG][LoggerInterceptor.java:24] - /first/btop3.do
+[15:40:49][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:40:49][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:40:49][DEBUG][LoggerInterceptor.java:24] - /first/ntop3.do
+[15:40:49][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : boardReadcountTop3method() 메소드 매개변수 갯수 ㅣ 0
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : noticeNewTop3Method() 메소드 매개변수 갯수 ㅣ 0
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:524] - 3. Connection opened
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:524] - 4. Connection opened
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.new Connection returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.setReadOnly(true) returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.new Connection returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.setReadOnly(true) returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.getAutoCommit() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.getAutoCommit() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.setAutoCommit(false) returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.setAutoCommit(false) returned 
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectNewTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:40:49][INFO ][BeforeAdviceOutPointcut.java:22] - [사전처리] : selectTop3() 메소드 첫번째 전달인자 정보 : 0
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:40:49][INFO ][BeforeAdviceOutPointcut.java:22] - [사전처리] : selectNewTop3() 메소드 첫번째 전달인자 정보 : 0
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.getAutoCommit() returned false
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectNewTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.new PreparedStatement returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.getAutoCommit() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@35e591db
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.new PreparedStatement returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@591db5da
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 20 msec}
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.execute() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.new ResultSet returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@b1b3bb3
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@a26fb47
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getType() returned 1003
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.isClosed() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.next() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getInt(board_num) returned 13
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getString(board_title) returned 설계방식3
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getInt(board_readcount) returned 8
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.isClosed() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.next() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getInt(board_num) returned 14
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getString(board_title) returned 새 게시글 등록 테스트
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getInt(board_readcount) returned 3
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.isClosed() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.next() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getInt(board_num) returned 11
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getString(board_title) returned MVC Model2
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.getInt(board_readcount) returned 2
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.isClosed() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.next() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. ResultSet.close() returned null
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@67db39e4
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 26 msec}
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@c6a4145
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.execute() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.close() returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.new ResultSet returned 
+[15:40:49][INFO ][AroundAdvice.java:39] - selectTop3() 메소드 수행에 걸린 시간 : 31(ms)초
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@201c72d2
+[15:40:49][INFO ][AfterAdvice.java:28] - Impl 클래스 메소드 실행 후 작동 : 서비스 로직 수행이 완료된 후 무조건 작동됨
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@179ae3d2
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getType() returned 1003
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.isClosed() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.commit() returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.setAutoCommit(true) returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.next() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.setReadOnly(false) returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getInt(noticeno) returned 23
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:543] - 3. Connection closed
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getString(noticetitle) returned 22
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.close() returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:40:49][INFO ][BoardController.java:44] - btop3.do : 3
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.isClosed() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.next() returned true
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getInt(noticeno) returned 22
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getString(noticetitle) returned 11
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.isClosed() returned false
+[15:40:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.next() returned true
+[15:40:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:40:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getInt(noticeno) returned 21
+[15:40:49][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getString(noticetitle) returned 테스트2
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:40:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.isClosed() returned false
+[15:40:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:40:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:40:49][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.next() returned false
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.close() returned null
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@6b835d1c
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@c8a0faf
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.close() returned 
+[15:40:49][INFO ][AroundAdvice.java:39] - selectNewTop3() 메소드 수행에 걸린 시간 : 43(ms)초
+[15:40:49][INFO ][AfterAdvice.java:28] - Impl 클래스 메소드 실행 후 작동 : 서비스 로직 수행이 완료된 후 무조건 작동됨
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.commit() returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.setAutoCommit(true) returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.setReadOnly(false) returned 
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:543] - 4. Connection closed
+[15:40:49][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.close() returned 
+[15:40:49][INFO ][NoticeController.java:77] - ntop3.do : 3
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:40:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:40:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:40:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:40:49][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:40:49][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:40:49][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:40:49][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:40:49][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:40:49][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@239d8e59
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:41:09][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:41:09][DEBUG][LoggerInterceptor.java:24] - /first/main.do
+[15:41:09][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : forwardMainView() 메소드 매개변수 갯수 ㅣ 0
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@239d8e59
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:41:09][INFO ][BeforeAdvice.java:40] - 3번째 전달인자 정보ModelAndView [view="common/main"; model={}]
+[15:41:09][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.core.ApplicationHttpRequest@239d8e59
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.HomeController#forwardMainView()
+[15:41:09][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:41:09][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:41:09][DEBUG][LoggerInterceptor.java:24] - /first/btop3.do
+[15:41:09][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : boardReadcountTop3method() 메소드 매개변수 갯수 ㅣ 0
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:524] - 5. Connection opened
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.new Connection returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.setReadOnly(true) returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.getAutoCommit() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.setAutoCommit(false) returned 
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:41:09][INFO ][BeforeAdviceOutPointcut.java:22] - [사전처리] : selectTop3() 메소드 첫번째 전달인자 정보 : 0
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : preHandle() 메소드 매개변수 갯수 ㅣ 3
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.getAutoCommit() returned false
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.new PreparedStatement returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@6f10f55e
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:41:09][DEBUG][LoggerInterceptor.java:23] - ========================START============================
+[15:41:09][DEBUG][LoggerInterceptor.java:24] - /first/ntop3.do
+[15:41:09][DEBUG][LoggerInterceptor.java:25] - =========================================================
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : noticeNewTop3Method() 메소드 매개변수 갯수 ㅣ 0
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:524] - 6. Connection opened
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 1 msec}
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.new Connection returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.execute() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.setReadOnly(true) returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.getAutoCommit() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.new ResultSet returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.setAutoCommit(false) returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@6b2f6c64
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectNewTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@2e2dff65
+[15:41:09][INFO ][BeforeAdviceOutPointcut.java:22] - [사전처리] : selectNewTop3() 메소드 첫번째 전달인자 정보 : 0
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getType() returned 1003
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : selectNewTop3() 메소드 매개변수 갯수 ㅣ 0
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.isClosed() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.getAutoCommit() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.next() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.new PreparedStatement returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_num) returned 13
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@6647100a
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getString(board_title) returned 설계방식3
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_readcount) returned 8
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.isClosed() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.next() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 1 msec}
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_num) returned 14
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.execute() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getString(board_title) returned 새 게시글 등록 테스트
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.new ResultSet returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@6b394d8
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_readcount) returned 3
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.isClosed() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5017cb56
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.next() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getType() returned 1003
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.isClosed() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_num) returned 11
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.next() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getString(board_title) returned MVC Model2
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getInt(noticeno) returned 23
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_readcount) returned 2
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getString(noticetitle) returned 22
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.isClosed() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.isClosed() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.next() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getInt(noticeno) returned 22
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.next() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getString(noticetitle) returned 11
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.close() returned null
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@771ba213
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.isClosed() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@c8a0faf
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.next() returned true
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.close() returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getInt(noticeno) returned 21
+[15:41:09][INFO ][AroundAdvice.java:39] - selectTop3() 메소드 수행에 걸린 시간 : 18(ms)초
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getString(noticetitle) returned 테스트2
+[15:41:09][INFO ][AfterAdvice.java:28] - Impl 클래스 메소드 실행 후 작동 : 서비스 로직 수행이 완료된 후 무조건 작동됨
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getDate(noticedate) returned 2022-10-18
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.isClosed() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.commit() returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.setAutoCommit(true) returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.setReadOnly(false) returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:543] - 5. Connection closed
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.close() returned 
+[15:41:09][INFO ][BoardController.java:44] - btop3.do : 3
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.next() returned false
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.close() returned null
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@61daa3c2
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@c6a4145
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.close() returned 
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:41:09][INFO ][AroundAdvice.java:39] - selectNewTop3() 메소드 수행에 걸린 시간 : 15(ms)초
+[15:41:09][INFO ][AfterAdvice.java:28] - Impl 클래스 메소드 실행 후 작동 : 서비스 로직 수행이 완료된 후 무조건 작동됨
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:41:09][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.commit() returned 
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.setAutoCommit(true) returned 
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@12fbfdf
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.setReadOnly(false) returned 
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:543] - 6. Connection closed
+[15:41:09][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.close() returned 
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@2fe2ad22
+[15:41:09][INFO ][NoticeController.java:77] - ntop3.do : 3
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.board.controller.BoardController#boardReadcountTop3method()
+[15:41:09][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : postHandle() 메소드 매개변수 갯수 ㅣ 4
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:41:09][DEBUG][LoggerInterceptor.java:37] - ======================== view ============================
+[15:41:09][INFO ][BeforeAdvice.java:36] - [메소드 실행전 확인] : afterCompletion() 메소드 매개변수 갯수 ㅣ 4
+[15:41:09][INFO ][BeforeAdvice.java:40] - 0번째 전달인자 정보org.apache.catalina.connector.RequestFacade@2da31780
+[15:41:09][INFO ][BeforeAdvice.java:40] - 1번째 전달인자 정보org.apache.catalina.connector.ResponseFacade@299c86ec
+[15:41:09][INFO ][BeforeAdvice.java:40] - 2번째 전달인자 정보com.test.first.notice.controller.NoticeController#noticeNewTop3Method()
+[15:41:09][DEBUG][LoggerInterceptor.java:48] - ======================== END ============================

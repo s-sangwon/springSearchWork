@@ -31,7 +31,8 @@ table td:last-child {
 }
 </style>
 <script type="text/javascript">
-
+var endDate;
+var startDate;
 
 function getLastDay(n) {
 	console.log($("select[name="+n+"Year]").val());
@@ -68,10 +69,10 @@ function checkform() {
 			}
 		}
 
-		var endDate = $('select[name=sYear]').val() + '-'
+		endDate = $('select[name=sYear]').val() + '-'
 				+ $('select[name=sMonth]').val().padStart(2, '0') + '-'
 				+ $('select[name=sDay]').val().padStart(2, '0');
-		var startDate = $('select[name=fYear]').val() + '-'
+		startDate = $('select[name=fYear]').val() + '-'
 				+ $('select[name=fMonth]').val().padStart(2, '0') + '-'
 				+ $('select[name=fDay]').val().padStart(2, '0');
 		var gd = new Date(endDate);
@@ -88,10 +89,77 @@ function checkform() {
 				'<input type="hidden" name="startDate" value="'+startDate+'">')
 		$('form[name=searchForm]').prepend(
 				'<input type="hidden" name="endDate" value="'+endDate+'">')
+				
+
 		//$('form[name=searchForm]').prepend('<input type="hidden" name="jumin_no" value="'+juminNo+'">')
 		return true;
 	}
 </script>
+<script type="text/javascript">
+function ajaxtest(){ 
+	var formData = new FormData(); //formData 객체 생성
+	//formData.append("sort", "no");
+	$.ajax({
+		url : "/ajaxSearch.do",
+		type : "get",
+		dataType : "text",
+		data : formData,
+		contentType: false,
+	    processData: false,
+		cache : false
+    }).done(function(result) {
+		  console.log("결과확인");
+		  $('#ajaxjstl').html(result);
+		//$('#jstlTest').html(result);		
+		
+	}).fail(function (jqXHR, textStatus, errorThrown) {
+		console.log("에러");
+		console.log(jqXHR);
+		console.log(textStatus);
+		console.log(errorThrown);
+	});
+}
+
+
+function ajaxSearch(page = 1, sort = "s.staff_no desc") {
+	if( !checkform()) {
+		return false;
+	}
+	
+	var formData = $('#searchForm').serialize()// serialize 사용 
+    
+	formData += "&page="+page;
+	formData += "&startDate="+(startDate ?? '');
+	formData += "&endDate="+(endDate ?? '');
+	formData += "&sort=" + sort;
+	console.log(formData);
+	
+	$.ajax({
+		url : "/ajaxSearch.do",
+		type : "get",
+		dataType : "text",
+		data : formData,
+		contentType: false,
+	    processData: false,
+		cache : false
+    }).done(function(result) {
+		  console.log("결과확인");
+		  console.log(result);
+		  $('#ajaxjstl').html(result);
+		//$('#jstlTest').html(result);		
+		
+	}).fail(function (jqXHR, textStatus, errorThrown) {
+		console.log("에러");
+		console.log(jqXHR);
+		console.log(textStatus);
+		console.log(errorThrown);
+	});
+}
+
+
+
+</script>
+
 </head>
 <body>
 
@@ -102,7 +170,7 @@ function checkform() {
 	반드시 enctype 속성을 form 태그에 추가해야 됨
 	enctype="multipart/form-data" 값을 지정해야함
 -->
-<form name="searchForm" action="search.do" method="get" onsubmit="return checkform();">
+<form id="searchForm" action="search.do" method="get" onsubmit="return checkform();">
 
 <table align="center" width="800"  cellspacing="0" cellpadding="5">
 	<tr><th colspan="6" >사원 정보 검색</th></tr>
@@ -181,21 +249,27 @@ function checkform() {
 					</td>
 	</tr>
 	<tr><td align="right" colspan="3" style="border: none;">
-		<input type="submit" value="검색">
+<!-- 		<input type="submit" value="검색"> -->
+		<input type="button" onclick="ajaxSearch()" value="검색">
 		</td>
 
 		<td align="right" colspan="3" style="border: none;">
-		<input type="button" onclick="javascript:location.href='/search.do'" value="전부검색">
+		<input type="button" onclick="ajaxtest()" value="전부검색">
+		<!-- <input type="button" onclick="javascript:location.href='/search.do'" value="전부검색"> -->
 		<input type="reset" value="초기화">
 		<button type="button" onclick="javascript:location.href='/staff_input_form.jsp';">등록</button>
 		</td>
 		</tr>
+		<c:if test="${ list ne null  }">
 		<tr><td colspan="6" align="right" style="border: none;">검색건수 -> ${ listCount }건</td></tr>
+		</c:if>
 </table>
 
 </form>
-<c:if test="${ list ne null }"></c:if>
-<table align="center" width="800"  cellspacing="0" cellpadding="5">
+<div id="ajaxjstl">
+<c:if test="${ list ne null  }">
+
+<table id="jstlTest" align="center" width="800"  cellspacing="0" cellpadding="5">
 	<tr>
 		<th>번호</th>
 		<th>이름</th>
@@ -204,6 +278,7 @@ function checkform() {
 		<th>졸업일</th>
 		<th></th>
 	</tr>
+
 	<c:forEach items="${ list }" var="s" varStatus="status"> 
 	<tr>
 		<%-- <td class="center">${status.count + limit * (currentPage-1)}</td> --%>
@@ -229,6 +304,7 @@ function checkform() {
 	</tr>
 	</c:forEach>
 	
+
 </table>
 
 <!-- pc 페이징 표시 영역-->
@@ -273,18 +349,10 @@ function checkform() {
 						<a href='${ ql }'>${ p }</a>&nbsp;
 					</c:if>
 				</c:forEach>
-				
-				<!-- 다음 페이지그룹으로 이동 처리 -->
-				<c:if test="${ (currentPage + limit) > endPage and (endPage + 1 ) < maxPage }">
-					<c:url var="ql3" value="/myQuestionListView.do">
-						<c:param name="page" value="${ endPage+1 }" />
-					</c:url>
-					<a class='next' href='${ ql3 }' style='cursor:default' title='다음그룹'></a>
-				</c:if>
-				<c:if test="${ !((currentPage + limit) > endPage and (endPage + 1) < maxPage) }">
-					<a class='next' href='#' style='cursor:default' title='다음그룹'></a>
-				</c:if>
+
 			</div>
+			</c:if>
+</div>
 <hr>
 </body>
 </html>

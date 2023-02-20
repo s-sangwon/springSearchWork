@@ -1,13 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/eclipse,java
 # Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,java
 
-#mybatis-config.xml
-#log4j.xml
+mybatis-config.xml
+log4j.xml
 
 lecture
 target
 pom.properties
-.classpath
 MANIFEST.MF
 
 ### Eclipse ###
@@ -19,7 +18,7 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.settings/
+# .settings/
 .loadpath
 .recommenders
 
@@ -77,10 +76,10 @@ local.properties
 .sts4-cache/
 
 # Eclipse Core
-.project
+# project
 
 # IDT-specific (Eclipse Java Development Tools)
-#.classpath
+# .classpath
 
 ### Java ###
 # Compiled class file

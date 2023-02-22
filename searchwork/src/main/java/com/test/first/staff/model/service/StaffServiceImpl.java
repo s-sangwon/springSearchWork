@@ -1,6 +1,7 @@
 package com.test.first.staff.model.service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.test.first.staff.model.dao.StaffDao;
 import com.test.first.staff.model.vo.Code_department;
+import com.test.first.staff.model.vo.Code_skill;
 import com.test.first.staff.model.vo.Staff;
 import com.test.first.staff.model.vo.Staff_skill;
 
@@ -61,6 +63,21 @@ public class StaffServiceImpl implements StaffService {
 	@Override
 	public ArrayList<Code_department> getDepartment() {
 		return staffDao.getDepartment();
+	}
+
+	@Override
+	public Code_skill searchSkillbynName(String skill) {
+		return staffDao.searchSkillbynName(skill);
+	}
+
+	@Override
+	public int insertCodeSkill(Code_skill code_skill) {
+		return staffDao.insertCodeSkill(code_skill);
+	}
+
+	@Override
+	public List<Code_skill> getCodeSkillList() {
+		return staffDao.getCodeSkillList();
 	}
 
 }

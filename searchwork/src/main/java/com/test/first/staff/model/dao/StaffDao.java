@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.test.first.staff.model.vo.Code_department;
+import com.test.first.staff.model.vo.Code_skill;
 import com.test.first.staff.model.vo.Staff;
 import com.test.first.staff.model.vo.Staff_skill;
 
@@ -54,6 +55,19 @@ public class StaffDao {
 	public ArrayList<Code_department> getDepartment() {
 		List<Code_department> list = session.selectList("departmentMapper.getDepartment");
 		return (ArrayList<Code_department>)list;
+	}
+
+	public Code_skill searchSkillbynName(String skill) {
+		return session.selectOne("skillMapper.searchSkillbynName",skill);
+	}
+
+	public int insertCodeSkill(Code_skill code_skill) {
+		return session.insert("skillMapper.insertCodeSkill", code_skill);
+	}
+
+	public List<Code_skill> getCodeSkillList() {
+		List<Code_skill> list = session.selectList("skillMapper.getCodeSkillList");
+		return list;
 	}
 	
 }

@@ -33,7 +33,7 @@
 		</th>
 		<th>성별 
 		<c:choose>
-		<c:when test="${ sort == 'gender asc' }">
+		<c:when test="${ sort eq 'gender asc' }">
 		<img onclick="ajaxSearch(1, 'gender desc' )" style="cursor:pointer;" width="10px" height="12px" src="/resources/images/sort.png">
 		</c:when>
 		<c:otherwise>
@@ -68,15 +68,15 @@
 		<tr>
 			<%-- <td class="center">${status.count + limit * (currentPage-1)}</td> --%>
 			<td class="center">${ s.staff_no }</td>
-			<td class="center">${ s.staff_name }</td>
-			<td class="center"><c:if
+			<td class="center" width="115">${ s.staff_name }</td>
+			<td class="center" width="50"><c:if
 					test="${ fn:substring(s.jumin_no,7,8 ) eq '1' || fn:substring(s.jumin_no,7,8 ) eq '3' }">
 		남
 		</c:if> <c:if
 					test="${ fn:substring(s.jumin_no,7,8 ) eq '2' || fn:substring(s.jumin_no,7,8 ) eq '4' }">
 		여
 		</c:if></td>
-			<td width="225" class="center"><c:forEach items="${ dlist }" var="d"
+			<td width="250" class="center"><c:forEach items="${ dlist }" var="d"
 					varStatus="status2">
 					<c:if test="${ d.department_code eq s.department_code }">
 					${ d.department_name }

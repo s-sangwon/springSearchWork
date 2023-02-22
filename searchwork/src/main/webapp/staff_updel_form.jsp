@@ -97,6 +97,14 @@ function checkform() {
 	
 	$('form[name=updateForm]').prepend('<input type="hidden" name="graduate_day" value="'+gDate+'">')
 	$('form[name=updateForm]').prepend('<input type="hidden" name="jumin_no" value="'+juminNo+'">')
+	
+	console.log($('.delBtn'))
+	for(var i=0; i < $('.delBtn').length; i++ ) {
+		console.log($('.delBtn')[i]);
+		$('form[name=updateForm]').prepend('<input type="hidden" name="skills" value="'+$('.delBtn')[i].value+'">');
+	}
+	
+	console.log( $('form[name=updateForm]').serialize());
 	return true;
 }
 
@@ -128,6 +136,21 @@ function getLastDay(n) {
 	}
 }
 
+function other() {
+	const skill = $('#otherSkill').val() ?? '';
+	if(skill == '') {
+		alert('기술을 입력해주세요.');
+		return false;
+	}
+	var str = `<input type="button" class="delBtn" name="skills" value=`+skill+`> `;
+	
+	$('#otherSkill').val('');
+	$('#addSkill').append(str);
+	
+}
+function delOther() {
+	$(this).remove();
+}
 
 $(function() {
 	var chkStyle = /^[0-9]+$/; //체크 방식(숫자)
@@ -153,10 +176,36 @@ $(function() {
 	$("input:radio[name=school_code]:radio[value="+${staff.school_code}+"]").prop('checked', true);
 	
 	//기술
-	for(const code of ${staff.skill_code}) {
-		console.log(code);
-		$("input:checkbox[name=skill_code]:checkbox[value="+code+"]").prop('checked', true);
-	}
+	var skillmap = null;
+	$.ajax({
+	  url : "/getCodeSkillList.do",
+	  type : "post",
+	  data : {},
+	  //dataType: "map",
+	  success : function(data) {
+	  	//console.log(data);
+	  	skillmap=data;
+
+		for(const code of ${staff.skill_code}) {
+			if (code > 5) { // 스킬버튼추가
+				//$("input:checkbox[name=skill_code]:checkbox[value="+code+"]").prop('checked', true);
+				//console.log(skillmap);
+				var str = `<input type="button" class="delBtn" name="skills" value=`+skillmap[code]+`> `;
+				//$('#otherSkill').val('');
+				$('#addSkill').append(str);
+				
+			} else { // 기본 스킬 체크박스
+				$("input:checkbox[name=skill_code]:checkbox[value="+code+"]").prop('checked', true);
+			}
+		}
+	  },
+	  error : function() {
+	  	alert("error");
+	  }
+	})
+	
+	
+
 	
 	//졸업일
 	$('select[name=sYear]').val(${fn:substring( staff.graduate_day, 0, 4 ) }).prop("selected",true);
@@ -164,6 +213,18 @@ $(function() {
 	$('select[name=sDay]').val(${fn:substring( staff.graduate_day, 8, 10 ) }).prop("selected",true);
 	
 	
+	//추가기술
+	$(document).on('click', ".delBtn" ,delOther);
+		
+		$('input[name="otherSkill"]').keydown(function() {
+			  if (event.keyCode === 13) {
+				  event.preventDefault(); // 엔터시 서브밋 방지
+				  $('#plus').trigger("click");  // 추가클릭
+				  //또는 other() 사용
+			  };
+			});
+		
+
 });
 </script>
 </head>
@@ -234,6 +295,16 @@ $(function() {
 
 					</td>		
 	</tr>
+					<tr>
+					<th>추가 기술</th>
+					<td id="addSkill" colspan="4"> 
+					</td>
+					<td>
+					<input  id="otherSkill"  name="otherSkill" style="width:100px;" type="text" placeholder="spring">
+					<input id="plus" type="button" onclick="other()" value="추가"><br>				
+					</td>
+					</tr>
+					
 		<tr><td align="center" colspan="6" style="border: none;">
 		<input type="submit" value="수정">
 

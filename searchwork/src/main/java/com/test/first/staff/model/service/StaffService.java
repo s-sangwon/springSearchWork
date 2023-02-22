@@ -1,9 +1,11 @@
 package com.test.first.staff.model.service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import com.test.first.staff.model.vo.Code_department;
+import com.test.first.staff.model.vo.Code_skill;
 import com.test.first.staff.model.vo.Staff;
 import com.test.first.staff.model.vo.Staff_skill;
 
@@ -26,5 +28,11 @@ public interface StaffService {
 	ArrayList<Staff> searchStaffList(Map<String, Object> map);
 
 	ArrayList<Code_department> getDepartment();
+
+	Code_skill searchSkillbynName(String skill);
+
+	int insertCodeSkill(Code_skill code_skill);
+
+	List<Code_skill> getCodeSkillList();
 
 }

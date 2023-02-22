@@ -92,6 +92,12 @@ function checkform() {
 				
 
 		//$('form[name=searchForm]').prepend('<input type="hidden" name="jumin_no" value="'+juminNo+'">')
+		for(var i=0; i < $('.delBtn').length; i++ ) {
+		console.log($('.delBtn')[i]);
+		$('form[name=searchForm]').prepend('<input type="hidden" name="skills" value="'+$('.delBtn')[i].value+'">');
+		}
+		
+		
 		return true;
 	}
 </script>
@@ -132,6 +138,14 @@ function ajaxSearch(page = 1, sort = "s.staff_no desc") {
 	formData += "&startDate="+(startDate ?? '');
 	formData += "&endDate="+(endDate ?? '');
 	formData += "&sort=" + sort;
+	
+	var str1 = '';
+	for(var i=0; i < $('.delBtn').length; i++ ) {
+		str1 += "&skills=" + $('.delBtn')[i].value;
+	}
+	formData += str1;
+	
+	
 	console.log(formData);
 	
 	$.ajax({
@@ -143,8 +157,8 @@ function ajaxSearch(page = 1, sort = "s.staff_no desc") {
 	    processData: false,
 		cache : false
     }).done(function(result) {
-		  console.log("결과확인");
-		  console.log(result);
+		//  console.log("결과확인");
+		//  console.log(result);
 		  $('#ajaxjstl').html(result);
 		//$('#jstlTest').html(result);		
 		
@@ -156,8 +170,39 @@ function ajaxSearch(page = 1, sort = "s.staff_no desc") {
 	});
 }
 
+function other() {
+	const skill = $('#otherSkill').val() ?? '';
+	if(skill == '') {
+		alert('기술을 입력해주세요.');
+		return false;
+	}
+	var str = `<input type="button" class="delBtn" name="skills" value=`+skill+`> `;
+	
+	$('#otherSkill').val('');
+	$('#addSkill').append(str);
+	
+}
+function delOther() {
+	$(this).remove();
+}
 
+function reset() {
+	$('.delBtn').trigger('click');
+}
 
+$(function(){
+	
+	$(document).on('click', ".delBtn" ,delOther);
+	$(document).on('click', "#reset" ,reset);	
+		$('input[name="otherSkill"]').keydown(function() {
+			  if (event.keyCode === 13) {
+				  event.preventDefault(); // 엔터시 서브밋 방지
+				  $('#plus').trigger("click");  // 추가클릭
+				  //또는 other() 사용
+			  };
+			});
+
+})
 </script>
 
 </head>
@@ -248,6 +293,16 @@ function ajaxSearch(page = 1, sort = "s.staff_no desc") {
 
 					</td>
 	</tr>
+										<tr>
+					<th>추가 기술</th>
+					<td id="addSkill" colspan="4"> 
+					</td>
+					<td>
+					<input  id="otherSkill"  name="otherSkill" style="width:100px;" type="text" placeholder="...">
+					<input id="plus" type="button" onclick="other()" value="추가"><br>				
+					</td>
+					</tr>
+					
 	<tr><td align="right" colspan="3" style="border: none;">
 <!-- 		<input type="submit" value="검색"> -->
 		<input type="button" onclick="ajaxSearch()" value="검색">
@@ -256,7 +311,7 @@ function ajaxSearch(page = 1, sort = "s.staff_no desc") {
 		<td align="right" colspan="3" style="border: none;">
 		<input type="button" onclick="ajaxtest()" value="전부검색">
 		<!-- <input type="button" onclick="javascript:location.href='/search.do'" value="전부검색"> -->
-		<input type="reset" value="초기화">
+		<input id="reset" type="reset" value="초기화">
 		<button type="button" onclick="javascript:location.href='/staff_input_form.jsp';">등록</button>
 		</td>
 		</tr>

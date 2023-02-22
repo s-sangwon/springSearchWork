@@ -14,6 +14,7 @@
 table th,
 table td {
 	border: 1px black solid;
+
 }
 table td.center {
 	text-align: center;
@@ -96,6 +97,14 @@ function checkform() {
 	
 	$('form[name=insertForm]').prepend('<input type="hidden" name="graduate_day" value="'+gDate+'">')
 	$('form[name=insertForm]').prepend('<input type="hidden" name="jumin_no" value="'+juminNo+'">')
+	
+	console.log($('.delBtn'))
+	for(var i=0; i < $('.delBtn').length; i++ ) {
+		console.log($('.delBtn')[i]);
+		$('form[name=insertForm]').prepend('<input type="hidden" name="skills" value="'+$('.delBtn')[i].value+'">');
+	}
+	//console.log($('#insertForm').serialize())
+	
 	return true;
 }
 </script>
@@ -116,6 +125,22 @@ function getLastDay(n) {
 	}
 }
 
+function other() {
+	const skill = $('#otherSkill').val() ?? '';
+	if(skill == '') {
+		alert('기술을 입력해주세요.');
+		return false;
+	}
+	var str = `<input type="button" class="delBtn" name="skills" value=`+skill+`> `;
+	
+	$('#otherSkill').val('');
+	$('#addSkill').append(str);
+	
+}
+function delOther() {
+	$(this).remove();
+}
+
 $(function(){
 	var chkStyle = /^[0-9]+$/; //체크 방식(숫자)
 	
@@ -133,6 +158,20 @@ $(function(){
 	      $(this).val($(this).val().replace(/[^0-9]/g,""));
 	   });
 	   
+	$(document).on('click', ".delBtn" ,delOther);
+	
+	$('input[name="otherSkill"]').keydown(function() {
+		  if (event.keyCode === 13) {
+			  event.preventDefault(); // 엔터시 서브밋 방지
+			  $('#plus').trigger("click");  // 추가클릭
+			  //또는 other() 사용
+		  };
+		});
+	
+	$(document).on('click', "#reset" ,function (){
+		$('.delBtn').trigger('click');
+	});	
+	
 });
 </script>
 </head>
@@ -140,17 +179,18 @@ $(function(){
 
 <!-- jstl 에서 절대경로 표기 : /WEB-INF/views/common/menubar.jsp -->
 <hr>
-<h2 align="center">새 공지글 등록 페이지</h2>
+<h2 align="center">등록 페이지</h2>
 <!-- form 태그에서 입력된 값들(문자열)과 첨부파일을 같이 전송하려면,
 	반드시 enctype 속성을 form 태그에 추가해야 됨
 	enctype="multipart/form-data" 값을 지정해야함
 -->
-<form name="insertForm" action="input.do" method="post" onSubmit="return checkform();">
+<form id="insertForm" name="insertForm" action="input.do" method="post" onSubmit="return checkform();">
 
 <table  align="center" width="800" cellspacing="0" cellpadding="5" >
 	<tr><th colspan="6" >사원 정보 등록</th></tr>
 	<tr>
-		<th>이름</th><td class="center" ><input required type="text" name="staff_name"></td>
+		<th>이름</th><td class="center" >
+				<input required type="text" name="staff_name"></td>
 		<th>주민번호</th><td class="center">
 					<input required style="width: 60px;" maxlength="6" type="text" name="n1"  > - <input required style="width: 60px;" type="password" maxlength="7" name="n2">
 					</td>
@@ -223,14 +263,23 @@ $(function(){
 				        </c:forEach>
 				    </select> 일
 
-					</td>		
-	</tr>
+					</td></tr>	
+					<tr>
+					<th>추가 기술</th>
+					<td id="addSkill" colspan="4"> 
+					</td>
+					<td>
+					<input  id="otherSkill"  name="otherSkill" style="width:100px;" type="text" placeholder="...">
+					<input id="plus" type="button" onclick="other()" value="추가"><br>				
+					</td>
+					</tr>
+	
 		<tr><td align="right" colspan="2" style="border: none;">
 		<input type="submit" value="등록">
 		</td>
 
 		<td align="right" colspan="4" style="border: none;">
-		<input type="reset" value="초기화">
+		<input id="reset" type="reset" value="초기화">
 		</td>
 		</tr>
 </table>

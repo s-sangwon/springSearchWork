@@ -19,6 +19,7 @@
 		<typeAlias type="com.test.first.staff.model.vo.Staff" alias="Staff" />
 		<typeAlias type="com.test.first.staff.model.vo.Staff_skill" alias="Staff_skill" />
 		<typeAlias type="com.test.first.staff.model.vo.Code_department" alias="Code_department" />
+		<typeAlias type="com.test.first.staff.model.vo.Code_skill" alias="Code_skill" />
 	</typeAliases>
 
 	<mappers>
@@ -29,5 +30,6 @@
 		
 		<mapper resource="mappers/staff-mapper.xml" />
 		<mapper resource="mappers/department-mapper.xml" />
+		<mapper resource="mappers/skill-mapper.xml" />
 	</mappers>
 </configuration>

@@ -194,13 +194,13 @@ $(function(){
 	
 	$(document).on('click', ".delBtn" ,delOther);
 	$(document).on('click', "#reset" ,reset);	
-		$('input[name="otherSkill"]').keydown(function() {
-			  if (event.keyCode === 13) {
-				  event.preventDefault(); // 엔터시 서브밋 방지
-				  $('#plus').trigger("click");  // 추가클릭
-				  //또는 other() 사용
-			  };
-			});
+	$('input[name="otherSkill"]').keydown(function() {
+		  if (event.keyCode === 13) {
+			  event.preventDefault(); // 엔터시 서브밋 방지
+			  $('#plus').trigger("click");  // 추가클릭
+			  //또는 other() 사용
+		  };
+		});
 
 })
 </script>

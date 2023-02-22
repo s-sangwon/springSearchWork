@@ -16,12 +16,12 @@ import lombok.ToString;
 @Setter
 public class Staff implements Serializable{
 	private static final long serialVersionUID = 6262288493452704401L;
-	int staff_no;
-	String staff_name;
-	String jumin_no;
-	int school_code;
-	int department_code;
-	String graduate_day;
+	private int staff_no;
+	private String staff_name;
+	private String jumin_no;
+	private int school_code;
+	private int department_code;
+	private String graduate_day;
 	
-	List<String> skill_code;
+	private List<String> skill_code;
 }

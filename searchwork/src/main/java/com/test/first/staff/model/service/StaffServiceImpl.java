@@ -17,7 +17,7 @@ import com.test.first.staff.model.vo.Staff_skill;
 public class StaffServiceImpl implements StaffService {
 
 	@Autowired
-	StaffDao staffDao;
+	private StaffDao staffDao;
 	
 	@Override
 	public int insertStaff(Staff staff) {

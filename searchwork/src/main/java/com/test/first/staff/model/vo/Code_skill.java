@@ -15,6 +15,6 @@ import lombok.ToString;
 @Setter
 public class Code_skill implements Serializable {
 	private static final long serialVersionUID = 533556159671373706L;
-	int skill_code;
-	String skill_name;
+	private int skill_code;
+	private String skill_name;
 }

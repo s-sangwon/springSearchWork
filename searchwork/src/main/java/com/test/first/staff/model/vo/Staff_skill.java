@@ -16,7 +16,7 @@ import lombok.ToString;
 public class Staff_skill implements Serializable{
 	private static final long serialVersionUID = -7932592247577665317L;
 	
-	int staff_skill_no;
-	int staff_no;
-	int skill_code;
+	private int staff_skill_no;
+	private int staff_no;
+	private int skill_code;
 }

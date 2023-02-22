@@ -15,6 +15,6 @@ import lombok.ToString;
 @Setter
 public class Code_school implements Serializable{
 	private static final long serialVersionUID = -3178301002395480457L;
-	int school_code;
-	String school_name;
+	private int school_code;
+	private String school_name;
 }

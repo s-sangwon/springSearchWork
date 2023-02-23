@@ -115,6 +115,7 @@ function ajaxtest(){
 		cache : false
     }).done(function(result) {
 		  console.log("결과확인");
+		  $('#reset').trigger('click');
 		  $('#ajaxjstl').html(result);
 		//$('#jstlTest').html(result);		
 		

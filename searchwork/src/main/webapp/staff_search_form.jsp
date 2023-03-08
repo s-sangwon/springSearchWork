@@ -29,6 +29,66 @@ table th:last-child,
 table td:last-child {
 	border-right: 0;
 }
+.paginate {
+    margin-top: 30px;
+    text-align: center;
+}
+.paginate .prev {
+    margin: 0 25px 0 3px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: url(/resources/images/pagingImg/ico_paginate_prev.png) center / auto 12px no-repeat;
+    text-indent: -9999em;
+}
+
+.paginate .first {
+    margin: 0 3px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: url(/resources/images/pagingImg/ico_paginate_first.png) center / auto 12px no-repeat;
+    text-indent: -9999em;
+}
+
+.paginate .next {
+    margin: 0 3px 0 25px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: url(/resources/images/pagingImg/ico_paginate_next.png) center / auto 12px no-repeat;
+    text-indent: -9999em;
+}
+
+.paginate .last {
+    margin: 0 3px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: url(/resources/images/pagingImg/ico_paginate_last.png) center / auto 12px no-repeat;
+    text-indent: -9999em;
+}
+
+.paginate a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    color: #333;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.paginate .curr {
+    border-radius: 100%;
+    background: #f46062;
+    font-weight: 700;
+    color: #fff;
+}
+
+label, img, input, select, textarea, button, a {
+    vertical-align: middle;
+}
+ins, a {
+    text-decoration: none;
+}
 </style>
 <script type="text/javascript">
 var endDate;
@@ -104,9 +164,12 @@ function checkform() {
 <script type="text/javascript">
 function ajaxtest(){ 
 	var formData = new FormData(); //formData 객체 생성
-	//formData.append("sort", "no");
+	formData.append("isAndOr", "or");
+	for(var pair of formData.entries()) {
+		  console.log(pair[0]+ ', '+ pair[1]); 
+		}
 	$.ajax({
-		url : "/ajaxSearch.do",
+		url : "/ajaxSearch.do?isAndOr=or",
 		type : "get",
 		dataType : "text",
 		data : formData,
@@ -145,8 +208,6 @@ function ajaxSearch(page = 1, sort = "s.staff_no desc") {
 		str1 += "&skills=" + $('.delBtn')[i].value;
 	}
 	formData += str1;
-	
-	
 	console.log(formData);
 	
 	$.ajax({
@@ -158,10 +219,7 @@ function ajaxSearch(page = 1, sort = "s.staff_no desc") {
 	    processData: false,
 		cache : false
     }).done(function(result) {
-		//  console.log("결과확인");
-		//  console.log(result);
-		  $('#ajaxjstl').html(result);
-		//$('#jstlTest').html(result);		
+		  $('#ajaxjstl').html(result);	
 		
 	}).fail(function (jqXHR, textStatus, errorThrown) {
 		console.log("에러");
@@ -296,11 +354,14 @@ $(function(){
 	</tr>
 										<tr>
 					<th>추가 기술</th>
-					<td id="addSkill" colspan="4"> 
+					<td id="addSkill" colspan="3"> 
 					</td>
 					<td>
 					<input  id="otherSkill"  name="otherSkill" style="width:100px;" type="text" placeholder="...">
 					<input id="plus" type="button" onclick="other()" value="추가"><br>				
+					</td>
+					<td>and<input type="radio" name="isAndOr" value="and">
+						or<input type="radio" name="isAndOr" value="or" checked="checked">
 					</td>
 					</tr>
 					
@@ -379,7 +440,7 @@ $(function(){
 				<!-- 현재 페이지가 속한 페이지 그룹 페이지 숫자 출력 -->
 				<c:forEach var="p" begin="${ startPage }" end="${ endPage }" step="1" >
 					<c:if test="${ p eq currentPage }">
-						<a class='curr' href='#'>[${ p }]</a>&nbsp;
+						<a class='curr' href='#'>${ p }</a>&nbsp;
 					</c:if>
 					<c:if test="${ p ne currentPage }">
 						<c:url var="ql" value="/search.do">

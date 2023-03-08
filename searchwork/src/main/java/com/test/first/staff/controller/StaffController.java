@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.collections.ListUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -187,14 +188,16 @@ public class StaffController {
 			@RequestParam(required = false) String staff_keyword,
 			@RequestParam(required = false) String gender[],
 			@RequestParam(required = false) String school_code[],
-			@RequestParam(required = false) String skill_code[],
+			@RequestParam(required = false) List<String> skill_code,
 			@RequestParam(required = false) String startDate,
 			@RequestParam(required = false) String endDate,
 			@RequestParam(required = false, defaultValue = "0") String department_code,
 			@RequestParam(required = false, defaultValue = "s.staff_no desc") String sort,
 			@RequestParam(required = false) List<String> skills,
+			@RequestParam(required = false) String isAndOr,
 			Model model) {
-
+		int skill_codeSize=0;
+		
 		log.info(page);
 		if (staff_keyword == null || staff_keyword.equals(""))
 			staff_keyword = null;
@@ -207,11 +210,12 @@ public class StaffController {
 			school_code = null;
 			//log.info(school_code.toString()); // default = NULL
 		}
-		if(skill_code == null || skill_code.length == 0) {
+		if(skill_code == null || skill_code.size() == 0) {
 			skill_code = null;
 			//log.info(skill_code.toString()); // default = NULL
 		} else {
-			log.info(skill_code + "" + skill_code.length +"");
+			log.info(skill_code + "" + skill_code.size() +"");
+			skill_codeSize = skill_code.size();
 		}
 		if(department_code.equals("0"))
 			department_code = null;
@@ -239,7 +243,19 @@ public class StaffController {
 			}
 		}
 		
-		
+		if( isAndOr.equals("and") && skills != null && skills.size()>0) {
+			// 추가기술 and조건일경우
+			if (skill_code != null) {
+				List<String> combined = new ArrayList<>(skill_code);
+				combined.addAll(otherSkills);
+				skill_code = combined;
+				skill_codeSize = combined.size();
+			} else {
+				List<String> combined = new ArrayList<>(otherSkills);
+				skill_code = combined;
+				skill_codeSize = combined.size();
+			}
+		} 
 		
 		Map<String,Object> map = new HashMap<String,Object>();
 		
@@ -252,13 +268,16 @@ public class StaffController {
 		map.put("staff_keyword",staff_keyword);
 		map.put("gender",gender);
 		map.put("school_code",school_code);
-		map.put("skill_code",skill_code);
+		
 		map.put("startDate",startDate);
 		map.put("endDate",endDate);
 		map.put("department_code", department_code);
 		map.put("sort", sort);
+		
 		map.put("otherSkills", otherSkills);
 		
+		map.put("skill_code",skill_code);
+		map.put("skill_codeSize", skill_codeSize);
 		// 페이징 계산
 		int listCount=0;
 		int limit = 5; 
@@ -297,7 +316,13 @@ public class StaffController {
 		model.addAttribute("dlist", dlist);
 		model.addAttribute("dmap", dmap);
 	
-
+		List<Code_skill> slist = staffService.getCodeSkillList();
+		HashMap<String,String> smap = new HashMap<String,String>();
+		
+		for(Code_skill s : slist) {
+			smap.put(String.valueOf(s.getSkill_code()) , s.getSkill_name());
+		}
+		model.addAttribute("smap", smap);
 		
 		model.addAttribute("list", list);
 		model.addAttribute("listCount", listCount);
@@ -316,6 +341,8 @@ public class StaffController {
 //		model.addAttribute("endDate", endDate);
 //		model.addAttribute("department_code", department_code);
 		model.addAttribute("sort", sort);  // 소트로 오름 내림차순 바운스 필요
+		model.addAttribute("skills",skills);
+		model.addAttribute("otherSkills",otherSkills);
 //		model.addAttribute("otherSkills", otherSkills);
 		return "ajax/staffList";
 	}

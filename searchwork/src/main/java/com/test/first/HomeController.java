@@ -39,7 +39,7 @@ public class HomeController {
 	
 	@RequestMapping("main.do")
 	public String forwardMainView() {
-		return "common/main"; // 내보낼 뷰파일명 리턴
+		return "../../staff_search_form"; // 내보낼 뷰파일명 리턴
 	}
 	
 	@GetMapping("staff_search_form.jsp")

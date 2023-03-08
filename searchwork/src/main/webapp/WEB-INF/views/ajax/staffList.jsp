@@ -87,41 +87,55 @@
 				onclick="javascript:location.href='/staffDetail.do/${s.staff_no}'"
 				value="수정/삭제"></td>
 		</tr>
+		<c:set var="contain_flag" value="false" />
+		<c:forEach items="${ otherSkills }" var="k">
+		    <c:if test="${s.skill_code.contains(k) && !contain_flag}">
+		        <c:set var="contain_flag" value="true" />
+		    </c:if>
+		</c:forEach>
+		
+		<c:if test="${ contain_flag }">
+		<tr ><td colspan="6">&nbsp;&nbsp;&nbsp;↳
+		<c:forEach items="${ otherSkills }" var="k">
+		    <c:if test="${s.skill_code.contains(k)}">
+		        ${ smap[k] }&nbsp;
+		    </c:if>
+		</c:forEach>
+		이(가) 포함된 직원
+		</td></tr>
+		</c:if>
 	</c:forEach>
-
+	
 
 </table>
 
 <!-- pc 페이징 표시 영역-->
 <div class="paginate" align="center">
+	<!-- 1페이지로 이동 처리 -->
+	<a class="first" href="javascript:void(0);" title='처음' onclick="ajaxSearch(1, '${ sort }')"></a>
+	<!-- 이전 페이지그룹으로 이동 처리 -->
+	<c:if test="${ (currentPage - limit) <= startPage and (currentPage - limit) >= 1 }">
+	    <a class="prev" href="javascript:void(0);" title='이전그룹' onclick="ajaxSearch('${ startPage - limit }', '${ sort }')"></a>
+	</c:if>
+	<c:if test="${ !((currentPage - limit) <= startPage and (currentPage - limit) >= 1) }">
+	    <a class='prev' href='#' style='cursor:default' title='이전그룹'></a>
+	</c:if>
 	<!-- 현재 페이지가 속한 페이지 그룹 페이지 숫자 출력 -->
 	<c:forEach var="p" begin="${ startPage }" end="${ endPage }" step="1">
 		<c:if test="${ p eq currentPage }">
-			<a class='curr' href='#'>[${ p }]</a>&nbsp;
-					</c:if>
+			<a class='curr' href='#'>${ p }</a>
+		</c:if>
 		<c:if test="${ p ne currentPage }">
-			<c:url var="ql" value="/ajaxSearch.do">
-				<c:param name="page" value="${ p }" />
-				<c:param name="staff_keyword" value="${ staff_keyword }" />
-
-				<c:forEach items="${ gender }" var="g">
-					<c:param name="gender" value="${ g }" />
-				</c:forEach>
-
-				<c:forEach items="${ school_code }" var="s">
-					<c:param name="school_code" value="${ s }" />
-				</c:forEach>
-
-				<c:forEach items="${ skill_code}" var="sCode">
-					<c:param name="skill_code" value="${ sCode }" />
-				</c:forEach>
-
-				<c:param name="department_code" value="${ department_code }" />
-				<c:param name="startDate" value="${ startDate }" />
-				<c:param name="endDate" value="${ endDate }" />
-			</c:url>
-			<a href="javascript:void(0);" onclick="ajaxSearch(${ p }, '${ sort }')">${ p }</a>&nbsp;
-					</c:if>
+			<a href="javascript:void(0);" onclick="ajaxSearch(${ p }, '${ sort }')">${ p }</a>
+		</c:if>
 	</c:forEach>
-
+	<!-- 다음 페이지그룹으로 이동 처리 -->
+	<c:if test="${ (currentPage + limit) > endPage and (endPage + 1 ) < maxPage }">
+	    <a class='next' href="javascript:void(0);" title='다음그룹' onclick="ajaxSearch(${ endPage+1 }, '${ sort }')"></a>
+	</c:if>
+	<c:if test="${ !((currentPage + limit) > endPage and (endPage + 1) < maxPage) }">
+	    <a class='next' href='#' style='cursor:default' title='다음그룹'></a>
+	</c:if>
+	<!-- 끝페이지로 이동 처리 -->
+	<a class="last" href="javascript:void(0);" title='끝'onclick="ajaxSearch(${ maxPage }, '${ sort }')"></a>
 </div>

@@ -8,6 +8,7 @@
 </head>
 <body>
 <%-- <jsp:forward page="main.do" /> --%>
+<jsp:forward page="main.do" />
 <a href='staff_search_form.jsp' >검색</a><br><br>
 <a href='staff_input_form.jsp' >입력</a><br><br>
 <a href='staff_updel_form.jsp' >수정</a><br><br>
